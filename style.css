@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-6: 2rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 62.438rem;
+  --shadow-card: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.1);
+
+  /* ===========================
+     Primary Colors
+  ============================ */
+  --clr-primary-red: hsl(0, 100%, 67%);
+  --clr-primary-red-alpha20: hsla(0, 100%, 67%, 0.2);
+  --clr-primary-yellow: hsl(39, 100%, 56%);
+  --clr-primary-yellow-alpha20: hsl(39, 100%, 56%, 0.2);
+  --clr-primary-green: hsl(166, 100%, 37%);
+  --clr-primary-green-alpha20: hsl(166, 100%, 37%, 0.2);
+  --clr-primary-blue: hsl(234, 85%, 45%);
+  --clr-primary-blue-alpha20: hsl(234, 85%, 45%, 0.2);
+
+  /* ===========================
+     Gradient Stops
+  ============================ */
+  --grad-bg-start: hsl(241, 81%, 63%);
+  --grad-bg-end: hsl(241, 81%, 54%); /* light royal blue */
+
+  --grad-circle-start: rgb(59, 15, 181) 0%; /* violet blue */
+  --grad-circle-end: hsla(241, 81%, 46%, 0) 100%; /* persian blue, fades out */
+
+  /* ===========================
+     Neutral Palette
+  ============================ */
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-pale-blue: hsl(221, 100%, 96%);
+  --clr-neutral-lavender: hsl(241, 100%, 89%);
+  --clr-neutral-dark-blue: hsl(224, 30%, 27%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.9;
+  min-height: 100dvh;
+  background-color: var(--clr-neutral-pale-blue);
+}
+p {
+  opacity: 0.9;
+}
+.layout {
+  min-height: 100svh; /* fills viewport height safely */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center; /* centers horizontally */
+  padding: var(--space-3);
+}
+.page {
+  width: 100%;
+  max-width: 740px; /* matches spec nicely */
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--clr-neutral-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+.card.result {
+  background: linear-gradient(var(--grad-bg-start), var(--grad-bg-end) 100%);
+  color: var(--clr-neutral-pale-blue);
+  text-align: center;
+}
+.result .card-title {
+  font-weight: 400;
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+.score-badge {
+  width: 160px;
+  height: 160px;
+  margin: var(--space-6) auto;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at top,
+    var(--grad-circle-start),
+    var(--grad-circle-end)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card .score-badge .score {
+  font-size: 4rem;
+  font-weight: 800;
+  opacity: 1;
+  color: var(--clr-neutral-white);
+}
+.card .score-badge .of {
+  font-size: 14px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+.card .label {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-1);
+  font-weight: 500;
+  color: var(--clr-neutral-white);
+}
+.summary .card-title {
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: var(--clr-neutral-dark-blue);
+}
+.summary .summary-list {
+  list-style: none;
+  margin: var(--space-4) 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.summary .item {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) max-content;
+  align-items: center;
+  padding: var(--space-3);
+  border-radius: 12px;
+}
+.summary .score {
+  grid-column: 3; /* force the whole score block into the last column */
+  white-space: nowrap; /* prevent line breaks */
+  text-align: right; /* optional: aligns number neatly */
+}
+/* Reaction Summary */
+.item.reaction {
+  background: var(--clr-primary-red-alpha20);
+}
+.item.reaction .icon {
+  width: 24px;
+  height: 24px;
+  background: url("/assets/images/icon-reaction.svg") center;
+}
+.item.reaction .name {
+  color: var(--clr-primary-red);
+}
+/* Memory Summary */
+.item.memory {
+  background: var(--clr-primary-yellow-alpha20);
+}
+.item.memory .icon {
+  width: 20px;
+  height: 20px;
+  background: url("/assets/images/icon-memory.svg") center;
+}
+.item.memory .name {
+  color: var(--clr-primary-yellow);
+}
+/* Verbal Summary */
+.item.verbal {
+  background: var(--clr-primary-green-alpha20);
+}
+.item.verbal .icon {
+  width: 20px;
+  height: 20px;
+  background: url("/assets/images/icon-verbal.svg") center;
+}
+.item.verbal .name {
+  color: var(--clr-primary-green);
+}
+/* Visual Summary */
+.item.visual {
+  background: var(--clr-primary-blue-alpha20);
+}
+.item.visual .icon {
+  width: 20px;
+  height: 20px;
+  background: url("/assets/images/icon-visual.svg") center;
+}
+.item.visual .name {
+  color: var(--clr-primary-blue);
+}
+.summary .name {
+  font-weight: 600;
+  padding-left: var(--space-1);
+}
+.summary .value {
+  color: var(--ink-700);
+  font-weight: 600;
+  padding-right: var(--space-1);
+}
+.summary .of {
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.btn {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-pill);
+  border: 0;
+  background: #121829;
+  color: var(--clr-neutral-white);
+  font-weight: 400;
+}
+.btn:hover {
+  background: var(--clr-primary-blue);
+}
+footer {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: var(--space-6);
+}
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
