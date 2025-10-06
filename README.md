@@ -16,9 +16,9 @@ A responsive results summary component. The goal was to practice semantic HTML, 
 
 ### Screenshots
 
-![Desktop screenshot](https://raw.githubusercontent.com/jenn-lawlor/four-card-feature-section/main/assets/images/desktop-version.png)
+![Desktop screenshot](https://raw.githubusercontent.com/jenn-lawlor/results-summary-component/main/assets/images/desktop-version.png)
 
-![Desktop screenshot](https://raw.githubusercontent.com/jenn-lawlor/four-card-feature-section/main/assets/images/mobile-version.png)
+![Desktop screenshot](https://raw.githubusercontent.com/jenn-lawlor/results-summary-component/main/assets/images/mobile-version.png)
 
 ### Links
 

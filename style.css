@@ -149,7 +149,7 @@ p {
 .item.reaction .icon {
   width: 24px;
   height: 24px;
-  background: url("/assets/images/icon-reaction.svg") center;
+  background: url("./assets/images/icon-reaction.svg") center;
 }
 .item.reaction .name {
   color: var(--clr-primary-red);
@@ -161,7 +161,7 @@ p {
 .item.memory .icon {
   width: 20px;
   height: 20px;
-  background: url("/assets/images/icon-memory.svg") center;
+  background: url("./assets/images/icon-memory.svg") center;
 }
 .item.memory .name {
   color: var(--clr-primary-yellow);
@@ -173,7 +173,7 @@ p {
 .item.verbal .icon {
   width: 20px;
   height: 20px;
-  background: url("/assets/images/icon-verbal.svg") center;
+  background: url("./assets/images/icon-verbal.svg") center;
 }
 .item.verbal .name {
   color: var(--clr-primary-green);
@@ -185,7 +185,7 @@ p {
 .item.visual .icon {
   width: 20px;
   height: 20px;
-  background: url("/assets/images/icon-visual.svg") center;
+  background: url("./assets/images/icon-visual.svg") center;
 }
 .item.visual .name {
   color: var(--clr-primary-blue);
