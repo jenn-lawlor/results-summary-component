@@ -149,7 +149,8 @@ p {
 .item.reaction .icon {
   width: 24px;
   height: 24px;
-  background: url("assets/images/icon-reaction.svg") center;
+  background: url("https://raw.githubusercontent.com/jenn-lawlor/results-summary-component/main/assets/images/icon-reaction.svg")
+    center;
 }
 .item.reaction .name {
   color: var(--clr-primary-red);
